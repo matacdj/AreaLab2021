@@ -1,3 +1,13 @@
-body {
-    background-color: #862d59;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", monospace;
+    background-color: #8080803b;
+}
+div{
+    text-align: center;
+    margin-top: 80px;
+    font-size: 40px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
 }
