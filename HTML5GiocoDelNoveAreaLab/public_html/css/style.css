@@ -9,5 +9,7 @@ div{
     margin-top: 80px;
     font-size: 40px;
     text-transform: uppercase;
-    padding-bottom: 10px;
+}
+table, th, td {
+  border: 1px solid black;
 }
