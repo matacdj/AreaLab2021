@@ -2,19 +2,23 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Roboto Mono", monospace;
-    background-color: #8080803b;
+    background-color: #626D71;
 }
 div{
     text-align: center;
+    margin-left: 350px;
+    margin-right: 350px;
     margin-top: 80px;
     font-size: 40px;
     text-transform: uppercase;
+    background-color: #B38867;
+    border-radius: 10px;
 }
 table{
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
   border-collapse: collapse;
+  border-radius: 10px;
 }
 td {
   text-align: center;
@@ -23,4 +27,6 @@ button{
   font-size: 200%;
   text-align: center;
   width: 100px;
+  border-radius: 5px;
+  background-color: #CDCDC0;
 }
