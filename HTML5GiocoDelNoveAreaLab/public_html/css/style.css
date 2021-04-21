@@ -22,5 +22,13 @@ td {
 button{
   font-size: 200%;
   text-align: center;
-  width: 100px;
+  width: 70px;
+  height: 70px;
+  background-color: lightgreen;
+}
+button#newGame{
+  font-size: 200%;
+  text-align: center;
+  width: 250px;
+  background-color: lightpink;
 }

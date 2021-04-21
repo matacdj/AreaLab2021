@@ -3,7 +3,8 @@ var APP={
     
     /* Variabili globali */
     
-    listaGioco : [],
+    listaGioco : ['A','B','C','D','E','F','G','H',' '],
+    listaVittoria : ['A','B','C','D','E','F','G','H',' '],
     dizPosizioniVicine : {0:[1,3], 
                           1:[0,2,4],
                           2:[1,5], 
@@ -15,16 +16,72 @@ var APP={
                           8:[5,7]},
     
     /*Event CALLBACK/LISTENER + Bind  con Button */
-    callBack_nuovoGioco : function (event )
-    {
-       // preleviamo il contenuto della textedit
-       var contenutoTextEdit1 = $('#OP1').val();
-       var contenutoTextEdit2 = $('#OP2').val();
-       
-       contenutoTextEdit1 = parseInt(contenutoTextEdit1) + parseInt(contenutoTextEdit2);
 
-       $('#Ris1').html( 'Somma =' + contenutoTextEdit1 );
-   
+    mescola : function(array) {
+ 
+        //Ci prendiamo la lunghezza dell'array e partiamo dal fondo!
+        var currentIndex = array.length, temporaryValue, randomIndex;
+       
+        // Finché ci sono elementi da mescolare, iteriamo l'array
+        while (0 !== currentIndex) {
+       
+          //Prendiamo un indice a caso dell'array, purché sia compreso tra 0 e la lunghezza dell'array
+          randomIndex = Math.floor(Math.random() * currentIndex);
+       
+          //Riduciamo di un'unità l'indice corrente
+          currentIndex -= 1;
+       
+          // Una volta che abbiamo preso l'indice casuale, invertiamo l'elemento che stiamo analizzando alla posizione corrente (currentIndex) con quello alla posizione presa casualmente (randomIndex)
+       
+          //Variabile temporanea
+          temporaryValue = array[currentIndex];
+          //Eseguiamo lo scambio
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+        //Torniamo l'array mescolato a fine ciclo
+        return array;
+    },
+
+    callBack_nuovoGioco : function (event)
+    {
+        event.preventDefault();
+        APP.mescola(APP.listaGioco);
+        APP.riempiBottoni();
+    },
+
+    mossa : function(idButton){
+        var mossaPossibile = false;
+        var listIDMossePossibili = APP.dizPosizioniVicine[idButton];
+        var listValMossePossibili = [];
+        for(var i = 0; i<listIDMossePossibili.length; i++){
+            listValMossePossibili[i]=APP.listaGioco[i];
+        }
+        for(var i = 0; i<listValMossePossibili.length; i++){
+            if(listValMossePossibili[i]===' '){
+                mossaPossibile = true;
+                APP.listaGioco[i]=APP.listaGioco[idButton];
+                APP.listaGioco[idButton]=' ';
+            }
+        }
+        if(mossaPossibile){
+            APP.riempiBottoni();
+        }
+    },
+
+    vittoria : function(){
+        for(var i; i<9; i++){
+            if(APP.listaVittoria[i] === APP.listaGioco[i]){
+                return true;
+            }
+        }
+        return false;
+    },
+
+    riempiBottoni : function(){
+        for(var i = 0; i<9; i++){
+            $('#but'+i).html(APP.listaGioco[i]);
+        }
     },
 
     
@@ -36,6 +93,49 @@ var APP={
             event.preventDefault();
             APP.mossa(0);
         }) ;
+        
+        $('#but1').on('click', function (event){
+            event.preventDefault();
+            APP.mossa(1);
+        }) ;
+
+        $('#but2').on('click', function (event){
+            event.preventDefault();
+            APP.mossa(2);
+        }) ;
+
+        $('#but3').on('click', function (event){
+            event.preventDefault();
+            APP.mossa(3);
+        }) ;
+
+        $('#but4').on('click', function (event){
+            event.preventDefault();
+            APP.mossa(4);
+        }) ;
+
+        $('#but5').on('click', function (event){
+            event.preventDefault();
+            APP.mossa(5);
+        }) ;
+        
+        $('#but6').on('click', function (event){
+            event.preventDefault();
+            APP.mossa(6);
+        }) ;
+
+        $('#but7').on('click', function (event){
+            event.preventDefault();
+            APP.mossa(7);
+        }) ;
+
+        $('#but8').on('click', function (event){
+            event.preventDefault();
+            APP.mossa(8);
+        }) ;
+
+        $('#newGame').on( 'click', APP.callBack_nuovoGioco);
+
     }
     
 };
