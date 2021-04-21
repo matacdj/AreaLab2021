@@ -26,21 +26,16 @@ var APP={
        $('#Ris1').html( 'Somma =' + contenutoTextEdit1 );
    
     },
-   
-/*__________________________________________________________________*/
-   
-    // Bind di callBack_Sqrt con click su button #Sqrt
-    
-    init_callBack_sum_Click : function(){
-        $("#sum").on('click', APP.callBack_sum);
-    },
 
     
 /*___________________________________________________________________*/
     
     /* Richiama tutte le funzioni di Bind delle callback */
     init_AllCallback :  function (){
-        //APP.init_callBack_sum_Click() ;
+        $('#but0').on('click', function (event){
+            event.preventDefault();
+            APP.mossa(0);
+        }) ;
     }
     
 };
