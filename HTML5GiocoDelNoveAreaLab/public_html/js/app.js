@@ -49,7 +49,6 @@ var APP={
         APP.mescola(APP.listaGioco);
         APP.riempiBottoni();
         $('#stato').html('...');
-        se
     },
 
     mossa : function(idButton){
