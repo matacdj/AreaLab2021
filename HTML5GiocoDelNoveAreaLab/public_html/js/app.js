@@ -48,6 +48,8 @@ var APP={
         event.preventDefault();
         APP.mescola(APP.listaGioco);
         APP.riempiBottoni();
+        $('#stato').html('...');
+        se
     },
 
     mossa : function(idButton){
@@ -55,27 +57,50 @@ var APP={
         var listIDMossePossibili = APP.dizPosizioniVicine[idButton];
         var listValMossePossibili = [];
         for(var i = 0; i<listIDMossePossibili.length; i++){
-            listValMossePossibili[i]=APP.listaGioco[i];
+            listValMossePossibili[i]=APP.listaGioco[listIDMossePossibili[i]];
         }
         for(var i = 0; i<listValMossePossibili.length; i++){
             if(listValMossePossibili[i]===' '){
                 mossaPossibile = true;
-                APP.listaGioco[i]=APP.listaGioco[idButton];
+                APP.listaGioco[listIDMossePossibili[i]]=APP.listaGioco[idButton];
                 APP.listaGioco[idButton]=' ';
             }
         }
+        console.log(APP.listaGioco);
         if(mossaPossibile){
             APP.riempiBottoni();
+            $('#stato').html('...');
+        }else{
+            $('#stato').html('MOSSA IMPOSSIBILE');
+        }
+        if(APP.vittoria()){
+            $('#stato').html('HAI VINTO!');
         }
     },
 
     vittoria : function(){
-        for(var i; i<9; i++){
-            if(APP.listaVittoria[i] === APP.listaGioco[i]){
-                return true;
-            }
+        /*
+        if(APP.listaVittoria === APP.listaGioco){
+            return true;
         }
         return false;
+        
+        for (var i = 0; i < APP.listaGioco.length; ++i) {
+            if (APP.listaVittoria[i] !== APP.listaGioco[i]){
+                return false;
+            }
+            return true;
+        }
+        */
+        var isVittoria = true;
+        var i = 0;
+        while(i<9 && isVittoria){
+            if(APP.listaVittoria[i] !== APP.listaGioco[i]){
+                isVittoria = false;
+            }
+            i++;
+        }
+        return isVittoria;
     },
 
     riempiBottoni : function(){
