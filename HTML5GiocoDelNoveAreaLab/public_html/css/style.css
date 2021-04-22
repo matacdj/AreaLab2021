@@ -2,16 +2,16 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Roboto Mono", monospace;
-    background-color: #626D71;
+    background-color: #003B46;
 }
 div{
     text-align: center;
-    margin-left: 35%;
-    margin-right: 35%;
+    margin-left: 30%;
+    margin-right: 30%;
     margin-top: 80px;
     font-size: 200%;
     text-transform: uppercase;
-    background-color: #A1BE95;
+    background-color: #07575B;
     border-radius: 5px;
 }
 table{
@@ -28,7 +28,7 @@ td {
 button{
   font-size: 200%;
   text-align: center;
-  width: 70px;
+  width: 100px;
   border-radius: 5px;
   background-color: #CDCDC0;
   height: 100px;
@@ -39,8 +39,9 @@ button#newGame{
   text-align: center;
   width: 250px;
   border-radius: 50px;
-  background-color: #c65353;
+  background-color: #66A5AD;
 }
-h2{
+h2,p{
     text-align: center;
+    color: #C4DFE6;
 }
