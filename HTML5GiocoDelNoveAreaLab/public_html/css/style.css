@@ -25,6 +25,10 @@ td {
   text-align: center;
   
 }
+h1,p{
+    text-align: center;
+    color: white;
+}
 button{
   font-size: 200%;
   text-align: center;
@@ -33,15 +37,64 @@ button{
   background-color: #CDCDC0;
   height: 100px;
 }
-button#newGame{
 
-  font-size: 200%;
-  text-align: center;
-  width: 250px;
-  border-radius: 50px;
-  background-color: #66A5AD;
-}
-h2,p{
+/* --------- RISPOSTA RGB ---------- */
+h2{
     text-align: center;
-    color: #C4DFE6;
+    color: white;
+    background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0,255,0) 14.28%,
+                rgb(0,255,255) 21.4%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+    background-size: 600vw 600vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: slide 10s linear infinite forwards;
+}
+@keyframes slide {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 600vw;
+    }
+}
+
+/* --------- BOTTONE NUOVA PARTITA ---------- */
+button#newGame{
+    width: 300px;
+    height: 100px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    transition: ease-out 0.3s;
+    font-size: 2rem;
+    outline: none;
+    border: 3px solid #3399ff;
+    position: relative;
+    z-index: 1;
+    background-color: #003B46;
+}
+
+button#newGame:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+button#newGame:before {
+    transition: 0.3s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #3399ff;
+}
+
+button#newGame:hover:before {
+    transition: 0.5a all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
 }
