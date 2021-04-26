@@ -1,3 +1,7 @@
+##git rm -r --cached *.*
+##git add .
+
+
 ##Netbeans
 
 **/nbproject/private/*.*
@@ -8,6 +12,7 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+*private.xml
 
 
 
@@ -374,3 +379,5 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 HTML5GiocoDelNoveAreaLab/nbproject/private/private.xml
+/HTML5GiocoDelNoveAreaLab/nbproject/private/
+/HTML5AjaxIntro/nbproject/private/
