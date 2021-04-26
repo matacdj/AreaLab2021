@@ -379,3 +379,5 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 HTML5GiocoDelNoveAreaLab/nbproject/private/private.xml
+/HTML5GiocoDelNoveAreaLab/nbproject/private/
+/HTML5AjaxIntro/nbproject/private/
