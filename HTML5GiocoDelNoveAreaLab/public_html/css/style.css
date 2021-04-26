@@ -37,7 +37,15 @@ button{
   background-color: #CDCDC0;
   height: 100px;
 }
-
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #07575B;
+  color: white;
+}
+a {
+  color: #add8e6;
+}
 /* --------- RISPOSTA RGB ---------- */
 h2{
     text-align: center;
@@ -98,3 +106,4 @@ button#newGame:hover:before {
     opacity: 1;
     z-index: -1;
 }
+
