@@ -1,3 +1,8 @@
+##git rm --cached private.xml 
+##git add -u .
+##git commit -m "Record deletion of private.xml from the index"
+
+
 ##Netbeans
 
 **/nbproject/private/*.*
