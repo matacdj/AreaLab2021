@@ -37,6 +37,27 @@ button{
   background-color: #CDCDC0;
   height: 100px;
 }
+
+/* --------- TABELLA CLASSIFICA ---------- */
+table#classifica{
+    color: black;
+    margin-left: 80%;
+    border: 3px solid #cc66ff;
+    background-color: #0086b3;
+}
+tr#clas{
+    border: 3px solid #cc66ff;
+    color: #990000;
+}
+/*
+td#class{
+    color: red;
+}
+td#gg{
+    color: #003B46;
+}*/
+
+/* --------- FOOTER ---------- */
 footer {
   text-align: center;
   padding: 3px;
@@ -46,6 +67,7 @@ footer {
 a {
   color: #add8e6;
 }
+
 /* --------- RISPOSTA RGB ---------- */
 h2{
     text-align: center;
@@ -55,7 +77,7 @@ h2{
     background-size: 600vw 600vw;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    animation: slide 10s linear infinite forwards;
+    animation: slide 5s linear infinite forwards;
 }
 @keyframes slide {
     0%{
@@ -81,12 +103,10 @@ button#newGame{
     z-index: 1;
     background-color: #003B46;
 }
-
 button#newGame:hover {
     cursor: pointer;
     color: #fff;
 }
-
 button#newGame:before {
     transition: 0.3s all ease;
     position: absolute;
@@ -106,4 +126,3 @@ button#newGame:hover:before {
     opacity: 1;
     z-index: -1;
 }
-
