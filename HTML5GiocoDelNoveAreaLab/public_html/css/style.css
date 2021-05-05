@@ -38,16 +38,44 @@ button{
   height: 100px;
 }
 
-/* --------- TABELLA CLASSIFICA ---------- */
+/* --------- COMPILAZIONE NUOVO GIOCATORE ---------- */
+fieldset {
+    margin-right: 80%;
+    margin-left: 5%;
+    border: 2px solid #cc66ff;
+    background-color: #800080; 
+    color: #fff;
+    border-radius: 5px;
+}
+legend {
+    background-color: #800080; 
+    color: #ff0000;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #cc66ff;
+    border-radius: 5px;
+}
+#submit{
+    margin-left: 30px;
+    background-color: #cc66ff; 
+    padding: 5px;
+    color: #fff;
+    border: 2px solid #cc66ff;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+/* --------- TABELLA CLASSIFICA GIOCATORI ---------- */
 table#classifica{
     color: black;
     margin-left: 80%;
-    border: 3px solid #cc66ff;
-    background-color: #0086b3;
+    border: 2px solid #cc66ff;
 }
 tr#clas{
-    border: 3px solid #cc66ff;
-    color: #990000;
+    font-weight: bold;
+    border: 2px solid #cc66ff;
+    color: #ff6666;
 }
 /*
 td#class{
@@ -65,7 +93,7 @@ footer {
   color: white;
 }
 a {
-  color: #add8e6;
+  color: #3399ff;
 }
 
 /* --------- RISPOSTA RGB ---------- */
@@ -97,6 +125,7 @@ button#newGame{
     border-radius: 10px;
     transition: ease-out 0.3s;
     font-size: 2rem;
+    font-weight: bold;
     outline: none;
     border: 3px solid #3399ff;
     position: relative;

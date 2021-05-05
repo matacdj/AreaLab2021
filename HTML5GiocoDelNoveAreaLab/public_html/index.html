@@ -37,7 +37,22 @@ and open the template in the editor.
             </tr>
         </table>
         
-        <!----------- tabella classifica giocatori--------->
+        <!----------- COMPILAZIONE NUOVO GIOCATORE --------->
+        <form>
+            <fieldset>
+                <legend>AGGIUNGI UN GIOCATORE</legend>
+                <br>
+                <!-- Label del Nome-->
+                <label for="name">Come ti chiami?</label>
+                <input type="text" id="name" name="name" placeholder="xXgamerXx" maxlength="30">
+                <br>
+                <br>
+                <!-- Send details -->
+                <input type="submit" id="submit" value="Send details">
+            </fieldset>
+        </form>
+        
+        <!----------- TABELLA CLASSIFICA GIOCATORI --------->
         <table id="classifica">
             <tr id="clas">    
                 <td>GIOCATORI</td>
