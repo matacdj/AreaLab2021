@@ -58,6 +58,40 @@ var APP = {
             }
         });
     },
+    pressione_tasto_nuovo_utente: function () {
+        $.ajax({
+            url: "/WebSpringDAO/insertPersona.htm",
+            method: "GET", //type: "GET",  // or method 
+            data: "parametro=" + $('#par_001').val(),
+            headers: {
+                accept: "text/plain; charset=utf-8",
+                "contentType": "application/json; charset=utf-8"
+            },
+            success: function (data) {
+                $('#result').html("Inserito!");
+            },
+            error: function () {
+                $('#result').html("Caspita, errore!");
+            }
+        });
+    },
+    pressione_tasto_cancella_utente: function () {
+        $.ajax({
+            url: "/WebSpringDAO/deletePersona.htm",
+            method: "GET", //type: "GET",  // or method 
+            data: "parametro=" + $('#par_001').val(),
+            headers: {
+                accept: "text/plain; charset=utf-8",
+                "contentType": "application/json; charset=utf-8"
+            },
+            success: function (data) {
+                $('#result').html("Cancellato!");
+            },
+            error: function () {
+                $('#result').html("Caspita, errore!");
+            }
+        });
+    },
     JsonToString: function (o) {
         var out = '';
         if (Object.keys(o).indexOf('cognome') > 0)
@@ -72,6 +106,8 @@ var APP = {
      *associa una funzione all'evento pressione tasto invia*/
     init_Click_button: function () {
         $("#btn_001").on('click', APP.pressione_tasto_invia);
+        $("#btn_002").on('click', APP.pressione_tasto_nuovo_utente);
+        $("#btn_003").on('click', APP.pressione_tasto_cancella_utente);
     }
 };
 //Main viene eseguito quando il document è pronto => ready

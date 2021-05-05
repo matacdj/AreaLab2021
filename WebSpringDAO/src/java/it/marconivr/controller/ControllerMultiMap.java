@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import daos.*;
 import entity.*;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Tuple;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -84,5 +85,42 @@ public class ControllerMultiMap {
         //Persona person = g.fromJson("{\"nome\":" + valore + "}", Persona.class);
         String s = g.toJson(lPersonePrest);
         return (s);
+    }
+    
+    @RequestMapping(value = "/insertPersona.htm", method = RequestMethod.GET,
+            produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public void msg03(HttpServletRequest request) {
+        String valore = request.getParameter("parametro");
+        String[] splitted = valore.split(" ");
+        String cognome = splitted[0];
+        String nome = splitted[1];
+        Persona p = new Persona();
+        p.setCognome(cognome);
+        p.setNome(nome);
+        daoManager.insertPersona(p);
+    }
+    
+    @RequestMapping(value = "/deletePersona.htm", method = RequestMethod.GET,
+            produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public void msg04(HttpServletRequest request) {
+        String valore = request.getParameter("parametro");
+        String[] splitted = valore.split(" ");
+        String cognome = splitted[0];
+        String nome = splitted[1];
+        List<Persona> listPersona = daoManager.findAll();
+        for(int i=0; i<listPersona.size(); i++){
+            Persona personaTemp = listPersona.get(i);
+            if(personaTemp.getNome().equals(nome)){
+                if(personaTemp.getCognome().equals(cognome)){
+                    Persona personaDel = new Persona();
+                    personaDel.setCognome(cognome);
+                    personaDel.setNome(nome);
+                    personaDel.setId(Long.valueOf(i));
+                    daoManager.deletePersona(personaTemp);
+                }
+            }
+        }
     }
 }

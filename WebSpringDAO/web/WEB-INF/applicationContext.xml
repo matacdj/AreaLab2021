@@ -12,15 +12,15 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
     
     
-<!--
+
 <bean id="dataSource" 
       class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-      <property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver"/>
-      <property name="url" value="jdbc:derby:DATABASE"/>
-      <property name="username" value="admin"/>
-      <property name="password" value="admin"/>
+      <property name="driverClassName" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="url" value="jdbc:derby://localhost:1527/BDT"/>
+      <property name="username" value="USER1"/>
+      <property name="password" value="USER1"/>
 </bean>
--->
+
     
      
 
