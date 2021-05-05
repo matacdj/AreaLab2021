@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", monospace;
+    background-color: #003B46;
+}
+div{
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 80px;
+    font-size: 200%;
+    text-transform: uppercase;
+    background-color: #07575B;
+    border-radius: 5px;
+}
+table{
+  border: 2px solid #333;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  border-radius: 10px;
+}
+td {
+  text-align: center;
+  
+}
+h1,p{
+    text-align: center;
+    color: white;
+}
+button{
+  font-size: 200%;
+  text-align: center;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #CDCDC0;
+  height: 100px;
+}
+
+/* --------- TABELLA CLASSIFICA ---------- */
+table#classifica{
+    color: black;
+    margin-left: 80%;
+    border: 3px solid #cc66ff;
+    background-color: #0086b3;
+}
+tr#clas{
+    border: 3px solid #cc66ff;
+    color: #990000;
+}
+/*
+td#class{
+    color: red;
+}
+td#gg{
+    color: #003B46;
+}*/
+
+/* --------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #07575B;
+  color: white;
+}
+a {
+  color: #add8e6;
+}
+
+/* --------- RISPOSTA RGB ---------- */
+h2{
+    text-align: center;
+    color: white;
+    background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0,255,0) 14.28%,
+                rgb(0,255,255) 21.4%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+    background-size: 600vw 600vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: slide 5s linear infinite forwards;
+}
+@keyframes slide {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 600vw;
+    }
+}
+
+/* --------- BOTTONE NUOVA PARTITA ANIMATO ---------- */
+button#newGame{
+    width: 300px;
+    height: 100px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    transition: ease-out 0.3s;
+    font-size: 2rem;
+    outline: none;
+    border: 3px solid #3399ff;
+    position: relative;
+    z-index: 1;
+    background-color: #003B46;
+}
+button#newGame:hover {
+    cursor: pointer;
+    color: #fff;
+}
+button#newGame:before {
+    transition: 0.3s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #3399ff;
+}
+
+button#newGame:hover:before {
+    transition: 0.5a all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
