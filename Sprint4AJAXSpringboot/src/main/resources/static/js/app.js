@@ -108,22 +108,18 @@ var APP={
         }
     },
     
-    pressione_tasto_test: function () {
+    pressione_tasto_test: function (event) {
         $.ajax({
-            //url: "/WebSpringDAO/echo.htm",
-            url: "http://localhost:8080/salvaPartita.htm",
-            //url: "/WebSpringDAO/findRequestPerson.htm",  
+            url: "/salvaPartita.htm",
             method: "GET", //type: "GET",  // or method
             contentType: "application/json; charset=utf-8",
-
             //contentType: "jsonp",
             //dataType: "jsonp",
-
             accepts: {json: "application/json, text/javascript"}, //text: "text/plain",
             data: null, //Data to be sent to the server
             cache: false, //force requested pages not to be cached by the browser
             success: function (data) {  //A function to be called if the request succeeds
-                $("#testh1").html(data);
+                $("#testh1").html(data+"saas");
             },
             error: function () {
                 $("#testh1").html("error");

@@ -1,4 +1,4 @@
-package controller;
+package com.example.AJAXSpringboot.controller;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -39,7 +39,9 @@ public class ControllerMultiMap {
     @ResponseBody
     public String msg00(HttpServletRequest request) {
 
-        return "ciao";
+        String valore = "stringa";
+        String returnJson = "{\"valore\":\"" + valore + "\"}";  
+        return (returnJson);
     }
     
     
