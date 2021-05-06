@@ -19,58 +19,71 @@ and open the template in the editor.
         </div>    
         <br>
         <br>
+        <h2 id="punteggio">Mosse: </h2>
+        <h2 id="mosse">--</h2>
+        
         <!----------- COMPILAZIONE NUOVO GIOCATORE --------->
-        <form>
-            <fieldset>
-                <legend>COME TI CHIAMI?</legend>
-                <br>
-                <input type="text" id="name" name="name" placeholder="xXgamerXx" maxlength="30">
-                <br>
-                <br>
-                <!-- Send details -->
-                <input type="submit" id="submit" value="Send details">
-            </fieldset>
-        </form>
-        <!-------------------------->
-        <table>
-            <tr>    <!-- tag riga della tabella-->
-                <td><button id="but0">--</button></td>
-                <td><button id="but1">--</button></td>
-                <td><button id="but2">--</button></td>
-            </tr>
+        <table id="tab">
             <tr>
-                <td><button id="but3">--</button></td>
-                <td><button id="but4">--</button></td>
-                <td><button id="but5">--</button></td>
+                <td>
+                    </form>
+                        <fieldset>
+                            <legend>COME TI CHIAMI?</legend>
+                            <br>
+                            <input type="text" id="name" name="name" placeholder="xXgamerXx" maxlength="30">
+                            <br>
+                            <br>
+                            <!-- Send details -->
+                            <input type="submit" id="submit" value="Send details">
+                        </fieldset>
+                    </form>
+                </td>
+                
+                <td>
+                   <!----------- TABELLA DI GIOCO --------->
+                    <table id="gioco">
+                        <tr>    <!-- tag riga della tabella-->
+                            <td><button id="but0">--</button></td>
+                            <td><button id="but1">--</button></td>
+                            <td><button id="but2">--</button></td>
+                        </tr>
+                        <tr>
+                            <td><button id="but3">--</button></td>
+                            <td><button id="but4">--</button></td>
+                            <td><button id="but5">--</button></td>
+                        </tr>
+                        <tr>
+                            <td><button id="but6">--</button></td>
+                            <td><button id="but7">--</button></td>
+                            <td><button id="but8">--</button></td>
+                        </tr>
+                    </table> 
+                </td>
+                
+                <td>
+                    <!----------- TABELLA CLASSIFICA GIOCATORI --------->
+                    <table id="classifica">
+                        <tr id="clas">    
+                            <td>GIOCATORI</td>
+                            <td>PUNTEGGIO</td>
+                        </tr>
+                        <tr>    
+                            <td>giocatore 1</td>
+                            <td>punteggio 1</td>
+                        </tr>
+                        <tr>    
+                            <td>giocatore 2</td>
+                            <td>punteggio 2</td>
+                        </tr>
+                        <tr>    
+                            <td>giocatore 3</td>
+                            <td>punteggio 3</td>
+                        </tr>
+                    </table>
+                </td>
             </tr>
-            <tr>
-                <td><button id="but6">--</button></td>
-                <td><button id="but7">--</button></td>
-                <td><button id="but8">--</button></td>
-            </tr>
-        </table>
-        
-        
-        
-        <!----------- TABELLA CLASSIFICA GIOCATORI --------->
-        <table id="classifica">
-            <tr id="clas">    
-                <td>GIOCATORI</td>
-                <td>PUNTEGGIO</td>
-            </tr>
-            <tr>    
-                <td>giocatore 1</td>
-                <td>punteggio 1</td>
-            </tr>
-            <tr>    
-                <td>giocatore 2</td>
-                <td>punteggio 2</td>
-            </tr>
-            <tr>    
-                <td>giocatore 3</td>
-                <td>punteggio 3</td>
-            </tr>
-        </table>       
+        </table>        
+      
         <h2 id="stato"></h2>
         <br>
         <br>
