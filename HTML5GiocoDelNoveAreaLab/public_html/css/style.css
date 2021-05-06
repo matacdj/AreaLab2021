@@ -48,8 +48,8 @@ fieldset {
     border-radius: 5px;
 }
 legend {
-    background-color: #800080; 
-    color: #ff0000;
+    background-color: #cc66ff; 
+    color: white;
     font-weight: bold;
     padding: 10px;
     border: 2px solid #cc66ff;
@@ -71,7 +71,9 @@ table#classifica{
     color: black;
     margin-left: 80%;
     border: 2px solid #cc66ff;
+    background-color: #800080;
 }
+/*
 tr#clas{
     font-weight: bold;
     border: 2px solid #cc66ff;

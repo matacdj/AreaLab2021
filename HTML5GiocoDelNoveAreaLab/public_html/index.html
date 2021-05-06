@@ -19,6 +19,19 @@ and open the template in the editor.
         </div>    
         <br>
         <br>
+        <!----------- COMPILAZIONE NUOVO GIOCATORE --------->
+        <form>
+            <fieldset>
+                <legend>COME TI CHIAMI?</legend>
+                <br>
+                <input type="text" id="name" name="name" placeholder="xXgamerXx" maxlength="30">
+                <br>
+                <br>
+                <!-- Send details -->
+                <input type="submit" id="submit" value="Send details">
+            </fieldset>
+        </form>
+        <!-------------------------->
         <table>
             <tr>    <!-- tag riga della tabella-->
                 <td><button id="but0">--</button></td>
@@ -37,20 +50,7 @@ and open the template in the editor.
             </tr>
         </table>
         
-        <!----------- COMPILAZIONE NUOVO GIOCATORE --------->
-        <form>
-            <fieldset>
-                <legend>AGGIUNGI UN GIOCATORE</legend>
-                <br>
-                <!-- Label del Nome-->
-                <label for="name">Come ti chiami?</label>
-                <input type="text" id="name" name="name" placeholder="xXgamerXx" maxlength="30">
-                <br>
-                <br>
-                <!-- Send details -->
-                <input type="submit" id="submit" value="Send details">
-            </fieldset>
-        </form>
+        
         
         <!----------- TABELLA CLASSIFICA GIOCATORI --------->
         <table id="classifica">
@@ -70,17 +70,15 @@ and open the template in the editor.
                 <td>giocatore 3</td>
                 <td>punteggio 3</td>
             </tr>
-        </table>
-        
+        </table>       
         <h2 id="stato"></h2>
-
         <br>
         <br>
-
+        
+        <!----------- BOTTONE NUOVA PARTITA ----------->
         <center>
             <button id='newGame'>Nuova partita</button>
         </center>
-
         <br>
         <br>
         <br>
