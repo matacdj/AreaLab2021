@@ -44,7 +44,7 @@ button{
 /* --------- COMPILAZIONE NUOVO GIOCATORE ---------- */
 fieldset {
     border: 2px solid #cc66ff;
-    background-color: #800080; 
+    background-color: #960096; 
     color: #fff;
     border-radius: 5px;
     margin-left: 50%;
@@ -73,7 +73,7 @@ table#classifica{
     color: black;
     margin-left: 200%;
     border: 2px solid #cc66ff;
-    background-color: #800080;
+    background-color: #960096;
 }
 
 /* --------- FOOTER ---------- */
@@ -118,7 +118,7 @@ button#newGame{
     font-size: 2rem;
     font-weight: bold;
     outline: none;
-    border: 3px solid #3399ff;
+    border: 3px solid #cc66ff;
     position: relative;
     z-index: 1;
     background-color: #003B46;
@@ -136,7 +136,7 @@ button#newGame:before {
     bottom: 0;
     opacity: 0;
     content: "";
-    background-color: #3399ff;
+    background-color: #cc66ff;
 }
 
 button#newGame:hover:before {
